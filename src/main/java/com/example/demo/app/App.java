@@ -1,6 +1,20 @@
 package com.example.demo.app;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity // Hibernate
+@Table // For table in database
+
 public class App {
+    @Id
+    @SequenceGenerator(name = "app_sequence", sequenceName = "app_sequence", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "app_sequence")
+
     private Long id;
     private String name;
     private String[] users;

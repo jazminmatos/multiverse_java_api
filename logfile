@@ -1,0 +1,15 @@
+2022-01-05 06:29:41.814 EST [15936] LOG:  starting PostgreSQL 13.3 on x86_64-apple-darwin19.6.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.29), 64-bit
+2022-01-05 06:29:41.818 EST [15936] LOG:  listening on IPv6 address "::1", port 5432
+2022-01-05 06:29:41.818 EST [15936] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-01-05 06:29:41.819 EST [15936] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-01-05 06:29:41.846 EST [15937] LOG:  database system was shut down at 2021-10-08 14:26:13 EDT
+2022-01-05 06:29:41.856 EST [15936] LOG:  database system is ready to accept connections
+2022-01-05 06:29:46.843 EST [15960] FATAL:  database "jazminmatos" does not exist
+2022-01-05 06:30:08.370 EST [15968] FATAL:  database "jazminmatos" does not exist
+2022-01-05 06:34:10.682 EST [17159] FATAL:  database "JavaScooterApp" does not exist
+2022-01-05 06:34:19.135 EST [17167] FATAL:  database "jazminmatos" does not exist
+2022-01-05 06:48:09.968 EST [15936] LOG:  received fast shutdown request
+2022-01-05 06:48:09.969 EST [15936] LOG:  aborting any active transactions
+2022-01-05 06:48:09.972 EST [15936] LOG:  background worker "logical replication launcher" (PID 15943) exited with exit code 1
+2022-01-05 06:48:09.973 EST [15938] LOG:  shutting down
+2022-01-05 06:48:10.013 EST [15936] LOG:  database system is shut down

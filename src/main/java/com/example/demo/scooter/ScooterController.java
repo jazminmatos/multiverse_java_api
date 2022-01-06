@@ -1,6 +1,7 @@
 package com.example.demo.scooter;
 
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -10,12 +11,15 @@ import java.util.List;
 @RequestMapping(path = "api/v1/scooter")
 
 public class ScooterController {
+    private final ScooterService scooterService;
+
+    @Autowired // pass in Service class instance using dependency injection
+    public ScooterController(ScooterService scooterService) {
+        this.scooterService = scooterService;
+    }
+
     @GetMapping
-    public List<Scooter> getScooter() { // ALLOWS US TO GET JSON
-        return List.of(
-                new Scooter(
-                        1L,
-                        1L,
-                        true));
+    public List<Scooter> getScooters() { // ALLOWS US TO GET JSON
+        return scooterService.getScooters();
     }
 }

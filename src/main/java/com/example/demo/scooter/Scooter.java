@@ -1,6 +1,20 @@
 package com.example.demo.scooter;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity // Hibernate
+@Table // For table in database
+
 public class Scooter {
+    @Id
+    @SequenceGenerator(name = "scooter_sequence", sequenceName = "scooter_sequence", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "scooter_sequence")
+
     private Long id;
     private Long stationId; // currentChargingStation
     private Boolean isRented; // (rentStatus)
