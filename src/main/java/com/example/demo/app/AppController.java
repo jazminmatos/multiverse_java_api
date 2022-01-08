@@ -3,6 +3,8 @@ package com.example.demo.app;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -21,5 +23,10 @@ public class AppController {
     @GetMapping
     public List<App> getApps() { // ALLOWS US TO GET JSON
         return appService.getApps();
+    }
+
+    @PostMapping
+    public void registerNewApp(@RequestBody App app) {
+        appService.addNewApp(app);
     }
 }
